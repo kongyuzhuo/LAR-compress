@@ -76,7 +76,7 @@ class Quantize(nn.Module):
 
         self.dim = dim
         self.n_embed = n_embed
-        self.decay = decay
+        self.decay = decay 
         self.eps = eps
 
         embed = torch.randn(dim, n_embed)  # initialize
