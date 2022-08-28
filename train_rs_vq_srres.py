@@ -41,7 +41,7 @@ def main(args):
         # ckpt = {key:value for (key, value) in ckpt.items() if '_t.' in key or 'stage_one' in key}
         print(ckpt.keys())
         model.load_state_dict(ckpt, strict=True)
-    #model.cause_sr.load_state_dict(torch.load(args.cause_sr_resume)["model"].state_dict())
+    # model.cause_sr.load_state_dict(torch.load(args.cause_sr_resume)["model"].state_dict())
     # model = nn.DataParallel(model)
     optimizer = optim.Adam(filter(lambda p: p.requires_grad, model.parameters()), lr=args.lr)
 
